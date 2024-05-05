@@ -1,3 +1,9 @@
+def is_palindrome(word_to_check: str) -> bool:
+    if word_to_check == reversed(word_to_check):
+        return True
+    return False
+
+
 def pythagorean_triplet_by_sum(sum: int) -> None:
     for a in range(sum - 2):
         for b in range(sum - a - 1):
