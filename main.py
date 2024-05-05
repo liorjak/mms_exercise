@@ -1,10 +1,12 @@
-from math import pi
+import math
+
+PI = "3.141592653589793"
 
 
 def reverse_n_pi_digits(n: int) -> str:
-    string_pi = "3.141592653589793".split(".")
-    list1 = list(string_pi[1])
-    return str(list1[0:n])
+    string_pi = PI.split(".")
+    numbers_after_dot = list(string_pi[1])
+    return str(numbers_after_dot[0:n])
 
 
 def sorted_numbers(numbers: list) -> list:
@@ -49,16 +51,16 @@ def num_len(number: int) -> int:
 
 
 def main():
-    """number = 555
+    number = 555
     print(num_len(number))
     print()
     sum = 1000
     pythagorean_triplet_by_sum(sum)
     print()
-    word_to_check = "cac"  # not working
+    word_to_check = "cac"   # not working
     word_to_check = "abba"  # working
     print(is_sorted_palindrome(word_to_check))
-
+    print()
     number = 0
     numbers = []
     while number != -1:
@@ -68,7 +70,8 @@ def main():
         numbers.append(number)
     print(calculate_average(numbers))
     print(count_of_positive_numbers(numbers))
-    print(sorted_numbers(numbers))"""
+    print(sorted_numbers(numbers))
+    print()
     n = 3
     print(reverse_n_pi_digits(n))
 
