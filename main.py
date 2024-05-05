@@ -3,10 +3,10 @@ import math
 PI = "3.141592653589793"
 
 
-def reverse_n_pi_digits(n: int) -> str:
+def reverse_n_pi_digits(n: int) -> list:
     string_pi = PI.split(".")
     numbers_after_dot = list(string_pi[1])
-    return str(numbers_after_dot[0:n])
+    return numbers_after_dot[0:n]
 
 
 def sorted_numbers(numbers: list) -> list:
@@ -60,6 +60,7 @@ def main():
     word_to_check = "cac"   # not working
     word_to_check = "abba"  # working
     print(is_sorted_palindrome(word_to_check))
+
     print()
     number = 0
     numbers = []
@@ -71,9 +72,14 @@ def main():
     print(calculate_average(numbers))
     print(count_of_positive_numbers(numbers))
     print(sorted_numbers(numbers))
+
     print()
-    n = 3
-    print(reverse_n_pi_digits(n))
+    n = 5
+    pi_digits = reverse_n_pi_digits(n)
+    pi_digits_reverse = ""
+    for i in range(len(pi_digits)):
+        pi_digits_reverse += f"{pi_digits[len(pi_digits) - i - 1]}"
+    print(pi_digits_reverse)
 
 
 if __name__ == '__main__':
