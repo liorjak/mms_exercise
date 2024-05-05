@@ -1,4 +1,10 @@
-import math
+from math import pi
+
+
+def reverse_n_pi_digits(n: int) -> str:
+    string_pi = "3.141592653589793".split(".")
+    list1 = list(string_pi[1])
+    return str(list1[0:n])
 
 
 def sorted_numbers(numbers: list) -> list:
@@ -43,7 +49,7 @@ def num_len(number: int) -> int:
 
 
 def main():
-    number = 555
+    """number = 555
     print(num_len(number))
     print()
     sum = 1000
@@ -62,7 +68,9 @@ def main():
         numbers.append(number)
     print(calculate_average(numbers))
     print(count_of_positive_numbers(numbers))
-    print(sorted_numbers(numbers))
+    print(sorted_numbers(numbers))"""
+    n = 3
+    print(reverse_n_pi_digits(n))
 
 
 if __name__ == '__main__':
