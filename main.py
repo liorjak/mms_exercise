@@ -1,3 +1,6 @@
+import math
+
+
 def sorted_numbers(numbers: list) -> list:
     return sorted(numbers)
 
@@ -36,12 +39,7 @@ def pythagorean_triplet_by_sum(sum: int) -> None:
 
 
 def num_len(number: int) -> int:
-    length_of_number = 0
-    while number > 0:
-        number /= 10
-        length_of_number += 1
-
-    return length_of_number
+    return int(math.log10(abs(number)) + 1)
 
 
 def main():
