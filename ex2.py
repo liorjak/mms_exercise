@@ -1,5 +1,9 @@
-def is_palindrome(word_to_check: str) -> bool:
+
+def is_sorted_palindrome(word_to_check: str) -> bool:
     if word_to_check == reversed(word_to_check):
+        for i in range((len(word_to_check) // 2) - 1):
+            if word_to_check[i] > word_to_check[i + 1]:
+                return False
         return True
     return False
 
@@ -27,6 +31,10 @@ def main():
     print()
     sum = 1000
     pythagorean_triplet_by_sum(sum)
+    print()
+    word_to_check = "cac"  # not working
+    word_to_check = "abba"  # working
+    print(is_sorted_palindrome(word_to_check))
 
 
 if __name__ == '__main__':
