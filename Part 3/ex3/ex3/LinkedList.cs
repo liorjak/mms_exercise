@@ -73,7 +73,7 @@ namespace ex3
             return (node == Head.Next);
         }
 
-        private Node<T> SortLinkedList(int count)
+        private Node<T> Sort(int count)
         {
             Node<T> _current = Head;
             Node<T> _previous = _current;
