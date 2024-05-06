@@ -72,5 +72,61 @@ namespace ex3
 
             return (node == Head.Next);
         }
+
+        private Node<T> SortLinkedList(int count)
+        {
+            Node<T> _current = Head;
+            Node<T> _previous = _current;
+
+            Node<T> _min = _current;
+            Node<T> _minPrevious = _min;
+
+            Node<T> _sortedListHead = null;
+            Node<T> _sortedListTail = _sortedListHead;
+
+            for (int i = 0; i < count; i++)
+            {
+                _current = Head;
+                _min = _current;
+                _minPrevious = _min;
+
+                while (_current != null)
+                {
+                    if (_current.Value < _min.Value)
+                    {
+                        _min = _current;
+                        _minPrevious = _previous;
+                    }
+                    _previous = _current;
+                    _current = _current.Next;
+                }
+
+                if (_min == Head)
+                {
+                    Head = Head.Next;
+                }
+                else if (_min.Next == null)
+                {
+                    _minPrevious.Next = null;
+                }
+                else
+                {
+                    _minPrevious.Next = _minPrevious.Next.Next;
+                }
+
+                if (_sortedListHead != null)
+                {
+                    _sortedListTail.Next = _min;
+                    _sortedListTail = _sortedListTail.Next;
+                }
+                else
+                {
+                    _sortedListHead = _min;
+                    _sortedListTail = _sortedListHead;
+                }
+            }
+
+            return _sortedListHead;
+        }
     }
 }
