@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\mms_exercise\\ex3\\ex3\\ex3.csproj": {}
+    "C:\\Users\\user\\Desktop\\mms_exercise\\Part 3\\ex3\\ex3\\ex3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\mms_exercise\\ex3\\ex3\\ex3.csproj": {
+    "C:\\Users\\user\\Desktop\\mms_exercise\\Part 3\\ex3\\ex3\\ex3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\mms_exercise\\ex3\\ex3\\ex3.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\mms_exercise\\Part 3\\ex3\\ex3\\ex3.csproj",
         "projectName": "ex3",
-        "projectPath": "C:\\Users\\user\\Desktop\\mms_exercise\\ex3\\ex3\\ex3.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\mms_exercise\\Part 3\\ex3\\ex3\\ex3.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\mms_exercise\\ex3\\ex3\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\mms_exercise\\Part 3\\ex3\\ex3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
