@@ -27,5 +27,22 @@ namespace ex3
         {
             Head.Value = value;
         }
+
+        private int Pop()
+        {
+            int value;
+            value = Head.Value;
+            Head.Next = Head.Next;
+            return value;
+        }
+
+        private int Unqueue()
+        {
+            int value;
+            value = Head.Value;
+            Head.Next = Head.Next;
+            return value;
+
+        }
     }
 }
