@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using ex3;
@@ -8,10 +9,10 @@ namespace ex3
     class LinkedList<T>
     {
         public Node<int> Head { get; set; }
-        
+
         private void Append(int value)
         {
-            if(Head.Value == null)
+            if (Head.Value == null)
             {
                 Head.Value = value;
             }
@@ -42,7 +43,14 @@ namespace ex3
             value = Head.Value;
             Head.Next = Head.Next;
             return value;
+        }
 
+        public IEnumerator<T> ToList()
+        {
+            foreach (Node<T> item in Nodes)
+            {
+                yield return item.data;
+            }
         }
     }
 }
