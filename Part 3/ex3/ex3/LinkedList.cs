@@ -12,9 +12,9 @@ namespace ex3
 
         private void Append(int value)
         {
-            if (Head.Value == null)
+            if (Head.Next == null)
             {
-                Head.Value = value;
+                Head.Next.Value = value;
             }
             else
             {
@@ -22,6 +22,7 @@ namespace ex3
                 node.Next = Head.Next;
                 Head.Value = node.Value;
             }
+            Head.Next.Next = null;
         }
 
         private void Prepend(int value)
@@ -51,6 +52,24 @@ namespace ex3
             {
                 yield return item.data;
             }
+        }
+
+
+        private bool isCircular()
+        {
+            if (Head.Next == null)
+            {
+                return true;
+            }
+
+            Node<int> node = Head.Next;
+
+            while (node != null && node != Head.Next)
+            {
+                node = node.Next;
+            }
+
+            return (node == Head.Next);
         }
     }
 }

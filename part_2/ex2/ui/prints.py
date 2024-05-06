@@ -34,7 +34,7 @@ def pythagorean_triplet_by_sum(sum: int) -> None:
         for b in range(sum - a - 1):
             c = sum - a - b
             if a * a + b * b == c * c:
-                print(f"{a} < {b} < {c}")
+                print(f"a < b < c : {a} < {b} < {c}")
 
 
 def print_is_sorted() -> None:
