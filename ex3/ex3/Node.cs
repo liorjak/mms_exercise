@@ -15,6 +15,7 @@ namespace ex3
             this.Value = value;
             this.Next = null;
         }
+
         public Node(int value, Node<T> next)
         {
             this.Value = value;
