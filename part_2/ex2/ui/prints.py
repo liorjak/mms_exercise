@@ -1,4 +1,4 @@
-from part_2.ex2.logic import reverse_n_pi, length_of_number, calculate, palindrom
+from part_2.ex2.logic import reverse_n_pi, length_of_number, calculate, palindrome
 from part_2.ex2.ui import get_from_user
 
 
@@ -11,22 +11,27 @@ def print_pi_digits() -> None:
     print(f"For the number {n} the pi numbers is: {pi_digits_reverse}")
 
 
-def calcs() -> None:
+def print_the_data() -> None:
     numbers = []
     number = 0
+
     while number != -1:
         number = get_from_user.get_number_from_user()
         if number == -1:
             break
         numbers.append(number)
-    print(calculate.calculate_average(numbers))
-    print(calculate.count_of_positive_numbers(numbers))
-    print(calculate.sorted_numbers(numbers))
+
+    print("~~~~~~~~~~")
+    print("THE DATA:")
+    print("~~~~~~~~~~")
+    print(f"The average: {calculate.calculate_average(numbers)}")
+    print(f"The count of the positive numbers: {calculate.count_of_positive_numbers(numbers)}")
+    print(f"Sorted the numbers: {calculate.sorted_numbers(numbers)}")
 
 
 def print_len() -> None:
     number = 555
-    print(length_of_number.num_len(number))
+    print(f"The length of the number {number} is {length_of_number.num_len(number)}")
 
 
 def pythagorean_triplet_by_sum(sum: int) -> None:
@@ -40,4 +45,4 @@ def pythagorean_triplet_by_sum(sum: int) -> None:
 def print_is_sorted() -> None:
     word_to_check = "cac"   # not working
     word_to_check = "abba"  # working
-    print(palindrom.is_sorted_palindrome(word_to_check))
+    print(f"{palindrome.is_sorted_palindrome(word_to_check)} palindrome")

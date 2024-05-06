@@ -14,7 +14,7 @@ def main():
     prints.print_is_sorted()
 
     print()
-    prints.calcs()
+    prints.print_the_data()
 
     print()
     prints.print_pi_digits()
