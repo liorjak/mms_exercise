@@ -8,7 +8,7 @@ namespace ex3
 {
     class LinkedList<T>
     {
-        public Node<int> Head { get; set; }
+        public Node<T> Head { get; set; }
 
         private void Append(int value)
         {
@@ -18,7 +18,7 @@ namespace ex3
             }
             else
             {
-                Node<int> node = new Node<int>(value);
+                Node<T> node = new Node<T>(value);
                 node.Next = Head.Next;
                 Head.Value = node.Value;
             }
@@ -46,14 +46,15 @@ namespace ex3
             return value;
         }
 
-        public IEnumerator<T> ToList()
+        private IEnumerator<int> ToList()
         {
-            foreach (Node<T> item in Nodes)
+            Node<T> current = Head;
+            while (current != null)
             {
-                yield return item.data;
+                yield return current.Value;
+                current = current.Next;
             }
         }
-
 
         private bool isCircular()
         {
@@ -62,7 +63,7 @@ namespace ex3
                 return true;
             }
 
-            Node<int> node = Head.Next;
+            Node<T> node = Head.Next;
 
             while (node != null && node != Head.Next)
             {
