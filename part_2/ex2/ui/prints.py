@@ -1,5 +1,6 @@
 from part_2.ex2.logic import reverse_n_pi, length_of_number, calculate, palindrome
 from part_2.ex2.ui import get_from_user
+from part_2.ex2.ui import plot
 
 
 def print_pi_digits() -> None:
@@ -12,15 +13,7 @@ def print_pi_digits() -> None:
 
 
 def print_the_data() -> None:
-    numbers = []
-    number = 0
-
-    while number != -1:
-        number = get_from_user.get_number_from_user()
-        if number == -1:
-            break
-        numbers.append(number)
-
+    numbers = plot.plot_data()
     print("~~~~~~~~~~")
     print("THE DATA:")
     print("~~~~~~~~~~")

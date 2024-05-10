@@ -1,3 +1,6 @@
+from part_2.ex2.ui import get_from_user
+
+
 def sorted_numbers(numbers: list) -> list:
     return sorted(numbers)
 
@@ -15,3 +18,15 @@ def calculate_average(numbers: list) -> float:
     for i in range(len(numbers)):
         sum_of_numbers += numbers[i]
     return sum_of_numbers / len(numbers)
+
+
+def get_the_list_of_numbers() -> list:
+    numbers = []
+    number = 0
+
+    while number != -1:
+        number = get_from_user.get_number_from_user()
+        if number == -1:
+            break
+        numbers.append(number)
+    return numbers

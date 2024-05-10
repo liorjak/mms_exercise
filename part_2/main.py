@@ -1,6 +1,7 @@
 import math
 
 from part_2.ex2.ui import prints
+from part_2.ex2.ui import plot
 
 
 def main():
@@ -14,6 +15,7 @@ def main():
     prints.print_is_sorted()
 
     print()
+    # plot.plot_data()
     prints.print_the_data()
 
     print()
