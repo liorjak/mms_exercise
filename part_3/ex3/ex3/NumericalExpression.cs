@@ -10,6 +10,11 @@ namespace ex3
     class NumericalExpression
     {
         public long Number { get; set; }
+
+        public NumericalExpression(long number)
+        {
+            Number = number;
+        }
     }
 }
 
