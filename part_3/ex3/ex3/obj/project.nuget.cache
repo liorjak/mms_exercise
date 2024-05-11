@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nxS+ekrAP0Us2oHmQhOKCHMjaa6lKvP5exTb2M0WsOS3YR50SouExB+244E+1dX6RiemP6ju78gjXQlBfJTAZQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Desktop\\mms_exercise\\part_3\\ex3\\ex3\\ex3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+  ],
+  "logs": []
+}

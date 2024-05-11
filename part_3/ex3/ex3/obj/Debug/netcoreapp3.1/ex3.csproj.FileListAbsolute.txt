@@ -1,0 +1,28 @@
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.exe
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.deps.json
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.runtimeconfig.json
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.runtimeconfig.dev.json
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.dll
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.pdb
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.AssemblyInfo.cs
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.dll
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.pdb
+C:\Users\user\Desktop\mms_exercise\Part 3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.genruntimeconfig.cache
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.AssemblyInfo.cs
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.dll
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.pdb
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.exe
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.deps.json
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.runtimeconfig.json
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.runtimeconfig.dev.json
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.dll
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\bin\Debug\netcoreapp3.1\ex3.pdb
+C:\Users\user\Desktop\mms_exercise\part_3\ex3\ex3\obj\Debug\netcoreapp3.1\ex3.genruntimeconfig.cache

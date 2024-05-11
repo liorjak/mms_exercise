@@ -10,7 +10,7 @@ namespace ex3
     {
         public Node<T> Head { get; set; }
 
-        private void Append(int value)
+        public void Append(int value)
         {
             if (Head.Next == null)
             {
@@ -25,12 +25,12 @@ namespace ex3
             Head.Next.Next = null;
         }
 
-        private void Prepend(int value)
+        public void Prepend(int value)
         {
             Head.Value = value;
         }
 
-        private int Pop()
+        public int Pop()
         {
             int value;
             value = Head.Value;
@@ -46,7 +46,7 @@ namespace ex3
             return value;
         }
 
-        private IEnumerator<int> ToList()
+        public IEnumerator<int> ToList()
         {
             Node<T> current = Head;
             while (current != null)
@@ -75,58 +75,72 @@ namespace ex3
 
         private Node<T> Sort(int count)
         {
-            Node<T> _current = Head;
-            Node<T> _previous = _current;
+            Node<T> current = Head;
+            Node<T> previous = current;
 
-            Node<T> _min = _current;
-            Node<T> _minPrevious = _min;
+            Node<T> min;
+            Node<T> max;
+            Node<T> minPrevious;
 
-            Node<T> _sortedListHead = null;
-            Node<T> _sortedListTail = _sortedListHead;
+            Node<T> sortedListHead = null;
+            Node<T> sortedListTail = sortedListHead;
 
             for (int i = 0; i < count; i++)
             {
-                _current = Head;
-                _min = _current;
-                _minPrevious = _min;
+                current = Head;
+                min = current;
+                minPrevious = min;
 
-                while (_current != null)
+                while (current != null)
                 {
-                    if (_current.Value < _min.Value)
+                    if (current.Value < min.Value)
                     {
-                        _min = _current;
-                        _minPrevious = _previous;
+                        min = current;
+                        minPrevious = previous;
                     }
-                    _previous = _current;
-                    _current = _current.Next;
+                    previous = current;
+                    current = current.Next;
                 }
 
-                if (_min == Head)
+                if (min == Head)
                 {
                     Head = Head.Next;
                 }
-                else if (_min.Next == null)
+                else if (min.Next == null)
                 {
-                    _minPrevious.Next = null;
+                    minPrevious.Next = null;
                 }
                 else
                 {
-                    _minPrevious.Next = _minPrevious.Next.Next;
+                    minPrevious.Next = minPrevious.Next.Next;
                 }
 
-                if (_sortedListHead != null)
+                if (sortedListHead != null)
                 {
-                    _sortedListTail.Next = _min;
-                    _sortedListTail = _sortedListTail.Next;
+                    sortedListTail.Next = min;
+                    sortedListTail = sortedListTail.Next;
                 }
                 else
                 {
-                    _sortedListHead = _min;
-                    _sortedListTail = _sortedListHead;
+                    sortedListHead = min;
+                    sortedListTail = sortedListHead;
                 }
             }
+            max = sortedListTail;
+            min = sortedListHead;
+            GetMinNode(min);
+            GetMaxNode(max);
+            return sortedListHead;
+        }
 
-            return _sortedListHead;
+        private Node<T> GetMaxNode(Node<T> maxNode)
+        {
+            return maxNode;
+        }
+
+        private Node<T> GetMinNode(Node<T> minNode)
+        {
+            return minNode;
         }
     }
 }
