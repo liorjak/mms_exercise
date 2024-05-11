@@ -15,7 +15,6 @@ def main():
     prints.print_is_sorted()
 
     print()
-    # plot.plot_data()
     prints.print_the_data()
 
     print()
