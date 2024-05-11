@@ -7,12 +7,11 @@ namespace ex3
     {
         public static void Main(String[] args)
         {
-            long number = 765234564;
+            long number = 123;
             NumericalExpression numericalExpression = new NumericalExpression(number);
 
-            Console.WriteLine($"The length of the number {numericalExpression.ToString()} " +
-                $"({numericalExpression.GetValue(number)}) is " +
-                $"{NumericalExpression.SumLetters(number)}");
+            Console.WriteLine($"The Number is {numericalExpression.ToString()} ");
+
             
         }
     }
