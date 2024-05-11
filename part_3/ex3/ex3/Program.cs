@@ -10,11 +10,9 @@ namespace ex3
             long number = 123;
             NumericalExpression numericalExpression = new NumericalExpression(number);
 
-            Console.WriteLine($"The Number is {numericalExpression.ToString()} ");
-
-            Console.WriteLine(numericalExpression.GetValue(number));
-
-            Console.WriteLine($"The sum is {NumericalExpression.SumLetters(number)}");
+            Console.WriteLine($"The number of letters in the number '{numericalExpression.ToString()}' " +
+                $"|{ numericalExpression.GetValue(number)}| is " +
+                $"'{NumericalExpression.SumLetters(number)}'");
         }
     }
 }
