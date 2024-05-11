@@ -13,6 +13,8 @@ namespace ex3
             Console.WriteLine($"The Number is {numericalExpression.ToString()} ");
 
             Console.WriteLine(numericalExpression.GetValue(number));
+
+            Console.WriteLine(numericalExpression.SumLetters(number));
         }
     }
 }

@@ -103,6 +103,13 @@ namespace ex3
         {
             return number;
         }
+
+        public static int SumLetters(long number)
+        {
+            NumericalExpression numericalExpression = new NumericalExpression(number);
+            string words = numericalExpression.ToString().Replace(" ", "");
+            return words.Length;
+        }
     }
 }
 
