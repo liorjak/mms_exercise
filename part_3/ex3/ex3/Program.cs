@@ -7,7 +7,7 @@ namespace ex3
     {
         public static void Main(String[] args)
         {
-            long number = 123;
+            long number = 1;
             NumericalExpression numericalExpression = new NumericalExpression(number);
 
             Console.WriteLine($"The number of letters in the number '{numericalExpression.ToString()}' " +

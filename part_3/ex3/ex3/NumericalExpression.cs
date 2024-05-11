@@ -110,6 +110,13 @@ namespace ex3
             string words = numericalExpression.ToString().Replace(" ", "");
             return words.Length;
         }
+
+        // The principle in OOP is polymorphism (ex 7f)
+        public static int SumLetters(NumericalExpression numericalExpression)
+        {
+            string words = numericalExpression.ToString().Replace(" ", "");
+            return words.Length;
+        }
     }
 }
 

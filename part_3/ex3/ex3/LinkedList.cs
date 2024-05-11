@@ -38,7 +38,7 @@ namespace ex3
             return value;
         }
 
-        private int Unqueue()
+        public int Unqueue()
         {
             int value;
             value = Head.Value;
@@ -56,7 +56,7 @@ namespace ex3
             }
         }
 
-        private bool isCircular()
+        public bool isCircular()
         {
             if (Head.Next == null)
             {
@@ -73,7 +73,7 @@ namespace ex3
             return (node == Head.Next);
         }
 
-        private Node<T> Sort(int count)
+        public Node<T> Sort(int count)
         {
             Node<T> current = Head;
             Node<T> previous = current;
@@ -133,12 +133,12 @@ namespace ex3
             return sortedListHead;
         }
 
-        private Node<T> GetMaxNode(Node<T> maxNode)
+        public Node<T> GetMaxNode(Node<T> maxNode)
         {
             return maxNode;
         }
 
-        private Node<T> GetMinNode(Node<T> minNode)
+        public Node<T> GetMinNode(Node<T> minNode)
         {
             return minNode;
         }
