@@ -14,7 +14,7 @@ namespace ex3
 
             Console.WriteLine(numericalExpression.GetValue(number));
 
-            Console.WriteLine(numericalExpression.SumLetters(number));
+            Console.WriteLine($"The sum is {NumericalExpression.SumLetters(number)}");
         }
     }
 }
