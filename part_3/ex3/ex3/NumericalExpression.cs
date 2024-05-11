@@ -98,6 +98,11 @@ namespace ex3
             }
             return answer;
         }
+
+        public long GetValue(long number)
+        {
+            return number;
+        }
     }
 }
 
