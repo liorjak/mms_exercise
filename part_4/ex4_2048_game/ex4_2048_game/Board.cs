@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ex4_2048_game;
 
 namespace ex4_2048_game
-{
+{ 
     class Board
     {
         public int[,] Data { get; protected set; }
@@ -38,6 +38,28 @@ namespace ex4_2048_game
                 indexCol = randomIndex.Next(0, BOARD_SIZE);
 
                 Data[indexRow, indexCol] = value;
+            }
+        }
+
+        public void Move(Diraction diraction)
+        {
+            switch (diraction)
+            {
+                case Diraction.Up:
+                    
+                    break;
+
+                case Diraction.Down:
+                    
+                    break;
+
+                case Diraction.Right:
+                    
+                    break;
+
+                case Diraction.Left:
+                    
+                    break;
             }
         }
     }
