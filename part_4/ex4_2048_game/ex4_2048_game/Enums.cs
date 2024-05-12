@@ -14,6 +14,13 @@ namespace ex4_2048_game
         Down
     }
 
+    enum GameStatus
+    {
+        Win,
+        Lose,
+        Idle
+    }
+
     class Enums
     {
     }
