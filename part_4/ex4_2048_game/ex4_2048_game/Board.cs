@@ -14,6 +14,12 @@ namespace ex4_2048_game
         public const int BOARD_SIZE = 4;
         public const int FIRST_VALUES = 2;
 
+        public const int LEFT = 0;
+        public const int RIGHT = 1;
+        public const int UP = 2;
+        public const int DOWN = 3;
+        //public Constants constants = new Constants();
+
         public void SetFirstRandomValues()
         {
             int indexRow;
@@ -39,25 +45,35 @@ namespace ex4_2048_game
 
                 Data[indexRow, indexCol] = value;
             }
+
+            //temp
+            for (int i = 0; i < BOARD_SIZE; i++)
+            {
+                for (int j = 0; j < BOARD_SIZE; j++)
+                {
+                    Console.Write($"{Data[i, j]} ");
+                }
+                Console.WriteLine();
+            }
         }
 
         public void Move(Diraction diraction)
         {
             switch (diraction)
             {
-                case Diraction.Up:
+                case LEFT:
                     
                     break;
 
-                case Diraction.Down:
+                case (Diraction)RIGHT:
+                    //MoveRight();
+                    break;
+
+                case (Diraction)UP:
                     
                     break;
 
-                case Diraction.Right:
-                    
-                    break;
-
-                case Diraction.Left:
+                case (Diraction)DOWN:
                     
                     break;
             }
