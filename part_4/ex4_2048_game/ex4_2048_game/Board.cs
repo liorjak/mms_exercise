@@ -18,7 +18,7 @@ namespace ex4_2048_game
             Random randomIndex = new Random();
             Random randomNumber = new Random();
 
-            for(int i = 0; i < 2; i++)
+            for (int i = 0; i < 2; i++)
             {
                 value = randomNumber.Next(2, 5);
                 while (value % 2 != 0)
@@ -30,9 +30,7 @@ namespace ex4_2048_game
                 indexCol = randomIndex.Next(0, 15);
 
                 Data[indexRow, indexCol] = value;
-                Console.WriteLine(value);
             }
-            
         }
     }
 }
