@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\bin\Debug\net5.0\ex4_2048_game.exe
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\bin\Debug\net5.0\ex4_2048_game.deps.json
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\bin\Debug\net5.0\ex4_2048_game.runtimeconfig.json
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\bin\Debug\net5.0\ex4_2048_game.runtimeconfig.dev.json
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\bin\Debug\net5.0\ex4_2048_game.dll
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\bin\Debug\net5.0\ref\ex4_2048_game.dll
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\bin\Debug\net5.0\ex4_2048_game.pdb
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\obj\Debug\net5.0\ex4_2048_game.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\obj\Debug\net5.0\ex4_2048_game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\obj\Debug\net5.0\ex4_2048_game.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\obj\Debug\net5.0\ex4_2048_game.AssemblyInfo.cs
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\obj\Debug\net5.0\ex4_2048_game.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\obj\Debug\net5.0\ex4_2048_game.dll
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\obj\Debug\net5.0\ref\ex4_2048_game.dll
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\obj\Debug\net5.0\ex4_2048_game.pdb
+C:\Users\user\Desktop\mms_exercise\part_4\ex4_2048_game\ex4_2048_game\obj\Debug\net5.0\ex4_2048_game.genruntimeconfig.cache

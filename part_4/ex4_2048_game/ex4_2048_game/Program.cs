@@ -6,7 +6,8 @@ namespace ex4_2048_game
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Board board = new Board();
+            board.SetFirstRandomValues();
         }
     }
 }
