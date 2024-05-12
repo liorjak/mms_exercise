@@ -18,7 +18,8 @@ namespace ex4_2048_game
         public const int RIGHT = 1;
         public const int UP = 2;
         public const int DOWN = 3;
-        //public Constants constants = new Constants();
+
+        public MoveCell moveCell = new MoveCell();
 
         public void SetFirstRandomValues()
         {
@@ -62,19 +63,19 @@ namespace ex4_2048_game
             switch (diraction)
             {
                 case LEFT:
-                    
+                    moveCell.MoveLeft();
                     break;
 
                 case (Diraction)RIGHT:
-                    //MoveRight();
+                    moveCell.MoveRight();
                     break;
 
                 case (Diraction)UP:
-                    
+                    moveCell.MoveUp();
                     break;
 
                 case (Diraction)DOWN:
-                    
+                    moveCell.MoveDown();
                     break;
             }
         }

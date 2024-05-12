@@ -8,36 +8,57 @@ namespace ex4_2048_game
 {
     class MoveCell: Board
     {
-        
-
-        private void MoveRight()
+        public void MoveRight()// DONE
         {
+            int tempIndex;
+
             for (int i = 0; i < BOARD_SIZE; i++)
             {
                 for (int j = 0; j < BOARD_SIZE; j++)
                 {
                     if (Data[i, j] != 0)
                     {
-                        if (i + 1 < BOARD_SIZE)
+                        tempIndex = i;
+                        for(int x = 0; x < BOARD_SIZE; x++)
                         {
-                            Data[i + 1, j] = Data[i, j];
+                            if (tempIndex + 1 < BOARD_SIZE)
+                            {
+                                Data[i + 1, j] = Data[i, j];
+                                tempIndex++;
+                            }
+                            else 
+                            {
+                                break;
+                            }
                         }
                     }
                 }
             }
         }
 
-        public void MoveLeft()
+        public void MoveLeft() //DONE
         {
+            int tempIndex;
+
             for (int i = 0; i < BOARD_SIZE; i++)
             {
                 for (int j = 0; j < BOARD_SIZE; j++)
                 {
                     if (Data[i, j] != 0)
                     {
-                        if (i - 1 >= 0)
+                        tempIndex = i;
+
+                        for(int x = 0; x < BOARD_SIZE; x++)
                         {
-                            Data[i - 1, j] = Data[i, j];
+                            if (tempIndex - 1 >= 0)
+                            {
+                                Data[i - 1, j] = Data[i, j];
+                                tempIndex--;
+                            }
+                            else
+                            {
+                                break;
+                            }
                         }
                     }
                 }
@@ -46,15 +67,25 @@ namespace ex4_2048_game
 
         public void MoveUp()
         {
+            int tempIndex;
             for (int i = 0; i < BOARD_SIZE; i++)
             {
                 for (int j = 0; j < BOARD_SIZE; j++)
                 {
                     if (Data[i, j] != 0)
                     {
-                        if (j - 1 >= 0)
+                        tempIndex = j;
+                        for (int x = 0; x < BOARD_SIZE; x++)
                         {
-                            Data[i, j - 1] = Data[i, j];
+                            if (tempIndex - 1 >= 0)
+                            {
+                                Data[i, j - 1] = Data[i, j];
+                                tempIndex--;
+                            }
+                            else
+                            {
+                                break;
+                            }
                         }
                     }
                 }
@@ -63,15 +94,26 @@ namespace ex4_2048_game
 
         public void MoveDown()
         {
+            int tempIndex;
+
             for (int i = 0; i < BOARD_SIZE; i++)
             {
                 for (int j = 0; j < BOARD_SIZE; j++)
                 {
                     if (Data[i, j] != 0)
                     {
-                        if (j + 1 < BOARD_SIZE)
+                        tempIndex = j;
+                        for (int x = 0; x < BOARD_SIZE; x++)
                         {
-                            Data[i, j + 1] = Data[i, j];
+                            if (tempIndex + 1 < BOARD_SIZE)
+                            {
+                                Data[i, j + 1] = Data[i, j];
+                                tempIndex++;
+                            }
+                            else
+                            {
+                                break;
+                            }
                         }
                     }
                 }
