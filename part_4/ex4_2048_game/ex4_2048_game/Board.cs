@@ -19,8 +19,6 @@ namespace ex4_2048_game
         public const int UP = 2;
         public const int DOWN = 3;
 
-        public MoveCell moveCell = new MoveCell();
-
         public void SetFirstRandomValues()
         {
             int indexRow;
@@ -35,10 +33,10 @@ namespace ex4_2048_game
 
             for (int i = 0; i < FIRST_VALUES; i++)
             {
-                value = randomNumber.Next(2, 5);
+                value = randomNumber.Next(2, BOARD_SIZE + 1);
                 while (value % 2 != 0)
                 {
-                    value = randomNumber.Next(2, 5);
+                    value = randomNumber.Next(2, BOARD_SIZE + 1);
                 }
 
                 indexRow = randomIndex.Next(0, BOARD_SIZE);
@@ -60,6 +58,7 @@ namespace ex4_2048_game
 
         public void Move(Diraction diraction)
         {
+            MoveCell moveCell = new MoveCell();
             switch (diraction)
             {
                 case LEFT:
