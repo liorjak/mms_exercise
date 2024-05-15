@@ -111,7 +111,6 @@ namespace ex4_2048_game
                                     Data[i, j - 1] = Data[i, j];
                                     tempIndex--;
                                 }
-                                
                             }
                             else
                             {
