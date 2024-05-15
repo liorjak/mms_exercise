@@ -8,7 +8,8 @@ namespace ex4_2048_game
 {
     class Game
     {
-        public Board board { get; private set; }
-        public GameStatus gameStatus { get; private set; }
+        public Board Board { get; set; }
+        public GameStatus GameStatus { get; set; }
+        public int Point { get; protected set; }
     }
 }
