@@ -21,8 +21,4 @@ namespace ex4_2048_game
         Lose,
         Idle
     }
-
-    class Enums
-    {
-    }
 }

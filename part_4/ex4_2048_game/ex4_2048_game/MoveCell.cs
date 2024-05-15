@@ -8,6 +8,10 @@ namespace ex4_2048_game
 {
     class MoveCell: Board
     {
+        public MoveCell(int[,] data) : base(data)
+        {
+            
+        }
         public void MoveRight()// DONE
         {
             int tempIndex;
@@ -23,8 +27,17 @@ namespace ex4_2048_game
                         {
                             if (tempIndex + 1 < BOARD_SIZE)
                             {
-                                Data[i + 1, j] = Data[i, j];
-                                tempIndex++;
+                                if (Data[i + 1, j] == Data[i, j])
+                                {
+                                    Data[i + 1, j] += Data[i, j];
+                                    break;
+                                }
+                                else
+                                {
+                                    Data[i + 1, j] = Data[i, j];
+                                    tempIndex++;
+                                }
+                                
                             }
                             else 
                             {
@@ -52,8 +65,17 @@ namespace ex4_2048_game
                         {
                             if (tempIndex - 1 >= 0)
                             {
-                                Data[i - 1, j] = Data[i, j];
-                                tempIndex--;
+                                if (Data[i - 1, j] == Data[i, j])
+                                {
+                                    Data[i - 1, j] += Data[i, j];
+                                    break;
+                                }
+                                else
+                                {
+                                    Data[i - 1, j] = Data[i, j];
+                                    tempIndex--;
+                                }
+                                
                             }
                             else
                             {
@@ -79,8 +101,17 @@ namespace ex4_2048_game
                         {
                             if (tempIndex - 1 >= 0)
                             {
-                                Data[i, j - 1] = Data[i, j];
-                                tempIndex--;
+                                if (Data[i, j - 1] == Data[i, j])
+                                {
+                                    Data[i, j - 1] += Data[i, j];
+                                    break;
+                                }
+                                else 
+                                {
+                                    Data[i, j - 1] = Data[i, j];
+                                    tempIndex--;
+                                }
+                                
                             }
                             else
                             {
@@ -89,6 +120,16 @@ namespace ex4_2048_game
                         }
                     }
                 }
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < BOARD_SIZE; i++)
+            {
+                for(int j = 0; j<BOARD_SIZE; j++)
+                {
+                    Console.Write($"{Data[i, j]} ");
+                }
+                Console.WriteLine();
             }
         }
 

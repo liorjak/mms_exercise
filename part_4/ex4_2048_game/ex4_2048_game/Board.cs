@@ -19,7 +19,12 @@ namespace ex4_2048_game
         public const int UP = 2;
         public const int DOWN = 3;
 
-        public void SetFirstRandomValues()
+        public Board(int[,] data)
+        {
+            Data = data;
+        }
+
+        public int[,] SetFirstRandomValues()
         {
             int indexRow;
             int indexCol;
@@ -27,9 +32,6 @@ namespace ex4_2048_game
 
             Random randomIndex = new Random();
             Random randomNumber = new Random();
-
-            int[,] data = new int[BOARD_SIZE, BOARD_SIZE];
-            Data = data;
 
             for (int i = 0; i < FIRST_VALUES; i++)
             {
@@ -54,11 +56,14 @@ namespace ex4_2048_game
                 }
                 Console.WriteLine();
             }
+            return Data;
         }
 
         public void Move(Diraction diraction)
         {
-            MoveCell moveCell = new MoveCell();
+            int[,] data = SetFirstRandomValues();
+
+            MoveCell moveCell = new MoveCell(data);
             switch (diraction)
             {
                 case LEFT:
@@ -71,12 +76,13 @@ namespace ex4_2048_game
 
                 case (Diraction)UP:
                     moveCell.MoveUp();
+                   
                     break;
 
                 case (Diraction)DOWN:
                     moveCell.MoveDown();
                     break;
             }
-        }
+        }        
     }
 }
