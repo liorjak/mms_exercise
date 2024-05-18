@@ -1,7 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 
+from scipy.stats import pearsonr
 from part_2.ex2.logic import calculate
+from scipy.state import pearsonr
 
 
 def plot_data() -> list:
@@ -30,3 +33,12 @@ def plot_data() -> list:
 
     plt.show()
     return numbers
+
+
+def calculate_pearson() -> None:
+    numbers = plot_data()
+    index = []
+    for i in range(len(numbers) + 1):
+        index.append(i)
+    pearson_correlation, _ = pearsonr(index, numbers)
+    return pearson_correlation

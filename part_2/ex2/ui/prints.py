@@ -13,7 +13,7 @@ def print_pi_digits() -> None:
 
 
 def print_the_data() -> None:
-    numbers = plot.plot_data()
+    plot.calculate_pearson()
     print("~~~~~~~~~~")
     print("THE DATA:")
     print("~~~~~~~~~~")
