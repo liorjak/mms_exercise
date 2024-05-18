@@ -3,161 +3,207 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ex4_2048_game;
 
 namespace ex4_2048_game
 {
     class MoveCell: Board
     {
+        public const int DEFAULT_VALUE = -9999;
+        
         public MoveCell(int[,] data) : base(data)
         {
-            
+
         }
-        public void MoveRight()// DONE
+
+        public int[,] MoveRight()
         {
             int tempIndex;
-
-            for (int i = 0; i < BOARD_SIZE; i++)
+            for (int row = 0; row < BOARD_SIZE; row++)
             {
-                for (int j = 0; j < BOARD_SIZE; j++)
+                for (int col = 0; col < BOARD_SIZE; col++)
                 {
-                    if (Data[i, j] != 0)
+                    tempIndex = 1;
+                    while (col - tempIndex >= col)
                     {
-                        tempIndex = i;
-                        for(int x = 0; x < BOARD_SIZE; x++)
+                        if (Data[row + tempIndex, col] == 0)
                         {
-                            if (tempIndex + 1 < BOARD_SIZE)
-                            {
-                                if (Data[i + 1, j] == Data[i, j])
-                                {
-                                    Data[i + 1, j] += Data[i, j];
-                                    break;
-                                }
-                                else
-                                {
-                                    Data[i + 1, j] = Data[i, j];
-                                    tempIndex++;
-                                }
-                                
-                            }
-                            else 
-                            {
-                                break;
-                            }
+                            Data[row + tempIndex, col] = Data[row, col];
+                            Data[row + tempIndex + 1, col] = 0;
                         }
+                        else if (Data[row + tempIndex, col] == Data[row, col])
+                        {
+                            Data[row + tempIndex, col] = Data[row, col] + Data[row, col];
+                            Data[row + tempIndex + 1, col] = 0;
+
+                            if (col != 0)
+                            {
+                                Data[row + tempIndex + 1, col] = DEFAULT_VALUE;
+                            }
+                            break;
+                        }
+                        else if (Data[row + tempIndex + 1, col] == DEFAULT_VALUE)
+                        {
+                            Data[row + tempIndex, col] = Data[row, col];
+                            Data[row + tempIndex + 1, col] = 0;
+                            break;
+                        }
+                        break;
                     }
                 }
             }
+            Data = AddTwoRandomValues();
+            return Data;
         }
 
-        public void MoveLeft() //DONE
+        public int[,] MoveLeft()
         {
             int tempIndex;
-
-            for (int i = 0; i < BOARD_SIZE; i++)
+            for (int row = 0; row < BOARD_SIZE - 1; row++) 
             {
-                for (int j = 0; j < BOARD_SIZE; j++)
+                for (int col = 0; col < BOARD_SIZE; col++)
                 {
-                    if (Data[i, j] != 0)
+                    tempIndex = 1;
+                    while (tempIndex + col <= col)
                     {
-                        tempIndex = i;
-
-                        for(int x = 0; x < BOARD_SIZE; x++)
+                        if (Data[row + tempIndex, col] == 0)
                         {
-                            if (tempIndex - 1 >= 0)
-                            {
-                                if (Data[i - 1, j] == Data[i, j])
-                                {
-                                    Data[i - 1, j] += Data[i, j];
-                                    break;
-                                }
-                                else
-                                {
-                                    Data[i - 1, j] = Data[i, j];
-                                    tempIndex--;
-                                }
-                                
-                            }
-                            else
-                            {
-                                break;
-                            }
+                            Data[row + tempIndex, col] = Data[row, col];
+                            Data[row + tempIndex - 1, col] = 0;
                         }
+                        else if (Data[row + tempIndex, col] == Data[row, col])
+                        {
+                            Data[row + tempIndex, col] = Data[row, col] + Data[row, col];
+                            Data[row + tempIndex - 1, col] = 0;
+
+                            if (col != 0)
+                            {
+                                Data[row + tempIndex - 1, col] = DEFAULT_VALUE;
+                            }
+                            break;
+                        }
+                        else if (Data[row + tempIndex - 1, col] == DEFAULT_VALUE)
+                        {
+                            Data[row + tempIndex, col] = Data[row, col];
+                            Data[row + tempIndex - 1, col] = 0;
+                            break;
+                        }
+                        break;
                     }
                 }
             }
+            Data = AddTwoRandomValues();
+            return Data;
         }
 
-        public void MoveUp()
+        public int[,] MoveUp()
         {
             int tempIndex;
-            for (int i = 0; i < BOARD_SIZE; i++)
+            for (int row = 0; row < BOARD_SIZE; row++) 
             {
-                for (int j = 0; j < BOARD_SIZE; j++)
+                for (int col = 0; col < BOARD_SIZE; col++)
                 {
-                    if (Data[i, j] != 0)
+                    tempIndex = 1;
+                    while (col - tempIndex >= col)
                     {
-                        tempIndex = j;
-                        for (int x = 0; x < BOARD_SIZE; x++)
+                        if (Data[row + tempIndex, col] == 0)
                         {
-                            if (tempIndex - 1 >= 0)
-                            {
-                                if (Data[i, j - 1] == Data[i, j])
-                                {
-                                    Data[i, j - 1] += Data[i, j];
-                                    break;
-                                }
-                                else 
-                                {
-                                    Data[i, j - 1] = Data[i, j];
-                                    tempIndex--;
-                                }
-                            }
-                            else
-                            {
-                                break;
-                            }
+                            Data[row + tempIndex, col] = Data[row, col];
+                            Data[row + tempIndex, col + 1] = 0;
                         }
+                        else if (Data[row + tempIndex, col] == Data[row, col])
+                        {
+                            Data[row + tempIndex, col] = Data[row, col] + Data[row, col];
+                            Data[row + tempIndex, col + 1] = 0;
+
+                            if (col != 0)
+                            {
+                                Data[row + tempIndex, col + 1] = DEFAULT_VALUE;
+                            }
+                            break;
+                        }
+                        else if (Data[row + tempIndex, col + 1] == DEFAULT_VALUE)
+                        {
+                            Data[row + tempIndex, col] = Data[row, col];
+                            Data[row + tempIndex, col + 1] = 0;
+                            break;
+                        }
+                        break;
                     }
                 }
             }
-            Console.WriteLine();
-
-            for (int i = 0; i < BOARD_SIZE; i++)
-            {
-                for(int j = 0; j<BOARD_SIZE; j++)
-                {
-                    Console.Write($"{Data[i, j]} ");
-                }
-                Console.WriteLine();
-            }
+            Data = AddTwoRandomValues();
+            return Data;
         }
 
-        public void MoveDown()
+        public int[,] MoveDown()
         {
             int tempIndex;
-
-            for (int i = 0; i < BOARD_SIZE; i++)
+            for (int row = 0; row < BOARD_SIZE; row++)
             {
-                for (int j = 0; j < BOARD_SIZE; j++)
+                for (int col = BOARD_SIZE - 1; col >= 0; col--)
                 {
-                    if (Data[i, j] != 0)
+                    tempIndex = 1;
+                    while (tempIndex + col <= col)
                     {
-                        tempIndex = j;
-                        for (int x = 0; x < BOARD_SIZE; x++)
+                        if (Data[row + tempIndex, col] == 0)
                         {
-                            if (tempIndex + 1 < BOARD_SIZE)
-                            {
-                                Data[i, j + 1] = Data[i, j];
-                                tempIndex++;
-                            }
-                            else
-                            {
-                                break;
-                            }
+                            Data[row + tempIndex, col] = Data[row, col];
+                            Data[row + tempIndex, col - 1] = 0;
                         }
+                        else if (Data[row + tempIndex, col] == Data[row, col])
+                        {
+                            Data[row + tempIndex, col] = Data[row, col] + Data[row, col];
+                            Data[row + tempIndex, col - 1] = 0;
+
+                            if (col != 0)
+                            {
+                                Data[row + tempIndex, col - 1] = DEFAULT_VALUE;
+                            }
+                            break;
+                        }
+                        else if (Data[row + tempIndex, col - 1] == DEFAULT_VALUE)
+                        {
+                            Data[row + tempIndex, col] = Data[row, col];
+                            Data[row + tempIndex, col - 1] = 0;
+                            break;
+                        }
+                        break;
                     }
                 }
             }
+            Data = AddTwoRandomValues();
+            return Data;
+        }
+
+        public int[,] AddTwoRandomValues()
+        {
+            int indexRow;
+            int indexCol;
+            int value;
+
+            Random randomIndex = new Random();
+            Random randomNumber = new Random();
+
+            for (int i = 0; i < FIRST_VALUES; i++)
+            {
+                value = randomNumber.Next(2, BOARD_SIZE + 1);
+                while (value % 2 != 0)
+                {
+                    value = randomNumber.Next(2, BOARD_SIZE + 1);
+                }
+
+                indexRow = randomIndex.Next(0, BOARD_SIZE);
+                indexCol = randomIndex.Next(0, BOARD_SIZE);
+
+                if (Data[indexRow, indexCol] != 0)
+                {
+                    indexRow = randomIndex.Next(0, BOARD_SIZE);
+                    indexCol = randomIndex.Next(0, BOARD_SIZE);
+                }
+                Data[indexRow, indexCol] = value;
+            }
+            return Data;
         }
     }
 }

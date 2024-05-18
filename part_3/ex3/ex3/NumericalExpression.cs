@@ -56,7 +56,7 @@ namespace ex3
                 return first_twenty[(int)Number];
             }
 
-            var answer = "";
+            string answer = "";
 
             for (long i = Number; i > 0; i %= limit, limit /= 1000)
             {

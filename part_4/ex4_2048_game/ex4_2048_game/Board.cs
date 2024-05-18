@@ -36,18 +36,20 @@ namespace ex4_2048_game
             for (int i = 0; i < FIRST_VALUES; i++)
             {
                 value = randomNumber.Next(2, BOARD_SIZE + 1);
-                while (value % 2 != 0)
-                {
-                    value = randomNumber.Next(2, BOARD_SIZE + 1);
-                }
+                value = ValidValue(value, randomNumber);
 
                 indexRow = randomIndex.Next(0, BOARD_SIZE);
                 indexCol = randomIndex.Next(0, BOARD_SIZE);
 
+
+                while(Data[indexRow, indexCol] != 0)
+                {
+                    indexRow = randomIndex.Next(0, BOARD_SIZE);
+                    indexCol = randomIndex.Next(0, BOARD_SIZE);
+                }
                 Data[indexRow, indexCol] = value;
             }
 
-            //temp
             for (int i = 0; i < BOARD_SIZE; i++)
             {
                 for (int j = 0; j < BOARD_SIZE; j++)
@@ -59,7 +61,17 @@ namespace ex4_2048_game
             return Data;
         }
 
-        public void Move(Diraction diraction)
+        private int ValidValue(int value, Random randomNumber)
+        {
+            while (value % 2 != 0)
+            {
+                value = randomNumber.Next(2, BOARD_SIZE + 1);
+            }
+            return value;
+        }
+
+
+        public void Move(int diraction)
         {
             int[,] data = SetFirstRandomValues();
 
@@ -70,16 +82,16 @@ namespace ex4_2048_game
                     moveCell.MoveLeft();
                     break;
 
-                case (Diraction)RIGHT:
+                case RIGHT:
                     moveCell.MoveRight();
                     break;
 
-                case (Diraction)UP:
+                case UP:
                     moveCell.MoveUp();
                    
                     break;
 
-                case (Diraction)DOWN:
+                case DOWN:
                     moveCell.MoveDown();
                     break;
             }

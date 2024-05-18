@@ -12,14 +12,14 @@ namespace ex3
 
         public Node(int value)
         {
-            this.Value = value;
-            this.Next = null;
+            Value = value;
+            Next = null;
         }
 
         public Node(int value, Node<T> next)
         {
-            this.Value = value;
-            this.Next = next;
+            Value = value;
+            Next = next;
         }
     }
 }
